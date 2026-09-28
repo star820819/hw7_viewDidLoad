@@ -1,24 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="25098" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_3" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="25073"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Night Sky View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="NightSkyViewController" customModule="hw7_viewDidLoad" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WsI-2t-jpl">
+                                <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y2S-pe-clX">
+                                <rect key="frame" x="164" y="489" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Click Me">
+                                    <color key="titleColor" systemColor="systemYellowColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BGO-pE-9zl" kind="show" id="1Y5-yS-0PW"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WsI-2t-jpl" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="J1n-JB-7al"/>
+                            <constraint firstItem="WsI-2t-jpl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LyT-UW-rhH"/>
+                            <constraint firstAttribute="bottom" secondItem="WsI-2t-jpl" secondAttribute="bottom" id="XMe-WF-B1X"/>
+                            <constraint firstItem="WsI-2t-jpl" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="n0h-sw-CZP"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nightSkyImageView" destination="WsI-2t-jpl" id="qf4-Qy-bN0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-73.134328358208947" y="107.09382151029747"/>
+        </scene>
+        <!--Dancing View Controller-->
+        <scene sceneID="XjE-oh-fuF">
+            <objects>
+                <viewController id="BGO-pE-9zl" customClass="DancingViewController" customModule="hw7_viewDidLoad" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pf0-Qf-bsA">
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fwS-2q-EUk">
+                                <rect key="frame" x="0.0" y="0.0" width="402" height="812"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ygb-9u-6KU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="fwS-2q-EUk" secondAttribute="bottom" id="bof-OU-Ail"/>
+                            <constraint firstItem="fwS-2q-EUk" firstAttribute="leading" secondItem="Ygb-9u-6KU" secondAttribute="leading" id="fKu-IW-6nk"/>
+                            <constraint firstItem="fwS-2q-EUk" firstAttribute="top" secondItem="Pf0-Qf-bsA" secondAttribute="top" id="l0E-4K-oct"/>
+                            <constraint firstItem="fwS-2q-EUk" firstAttribute="trailing" secondItem="Ygb-9u-6KU" secondAttribute="trailing" id="wBD-hK-J8f"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="TQI-Wa-wWC"/>
+                    <connections>
+                        <outlet property="dancingImageView" destination="fwS-2q-EUk" id="QsF-2i-HUA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="twZ-FP-L2N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="732.83582089552237" y="106.40732265446223"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
